@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Balaton</title>
   <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="balaton.css">
   <script src="jquery.min.js"></script>
   <script src="popper.min.js"></script>
   <script src="bootstrap.min.js"></script>
-  <link rel="stylesheet" href="balaton.css">
-  <link rel="stylesheet" href="balaton.js">
+  <script src="balaton.js"></script>
 </head>
 
 <body>
@@ -74,7 +74,7 @@
                 <td>0 db</td>
               </tr>
               <tr>
-                <td class="m-0" class="p-0" colspan="2" class="text-center">
+                <td colspan="2" class="text-center m-0 p-0">
                   Elhelyezkedés<br>
                   <figure class="figure">
                     <img src="map.png" class="figure-img rounded img-fluid w-100" alt="Elhelyezkedés"
@@ -90,16 +90,18 @@
               horvátul: Blatno jezero) tó a Dunántúlon, Közép-Európa legnagyobb tava, Magyarország vízrajzának
               meghatározó eleme. Könnyen felmelegedő, sekély vize kiválóan alkalmassá teszi a fürdésre és sportolásra,
               élővilága rendkívül gazdag, a táj változatos vulkanikus kúpjaival sok tekintetben egyedi.</p>
-            <q>
+            <blockquote>
               <p>Magyar elnevezése a szláv „blato”, "boloto" (mocsár, láp, sár) szóból ered, amely viszont a görög
                 "βαλτό"-ra vezethető vissza. Latin neve, a Lacus Pelso magyarul sekély tavat jelent. Szlovén, szerb,
                 horvát nyelven Blatno jezero, szlovákul Blatenské jazero. Középkori térképeken gyakran „Balotin” vagy
                 „Bolotin” (szláv balotnij = mocsaras) névváltozataban szerepel.</p>
+            </blockquote>
+            <blockquote>
               <p>Német elnevezése, a Plattensee, kicsit hasonlóképpen „lapos”, azaz sekély tavat jelent, egyben
                 hangzásában közel áll a szláv névhez, ezért lehetséges, hogy kialakulásában a népi etimológia is
                 szerepet játszott, azaz a német anyanyelvűek értelmet adtak a számukra idegen hangzású névnek (blatno –
                 platten)</p>
-            </q>
+            </blockquote>
             <p>A Balaton és környéke Budapest mellett az ország turisztikailag leglátogatottabb területe, 2004-ben
               elnyerte az Örökségünk – Somogyország Kincse címet is. Környékén gyógyfürdők, termálforrások találhatók. A
               „Balaton fővárosa” címet hivatalosan Keszthely viseli, de Siófok a déli part, Balatonfüred pedig az északi
@@ -154,17 +156,17 @@
             <div class="row">
               <div class="col-4">
                 <ul id="halLista">
-                  <li onmousedown="if(event.button==0) halinfo('balin');">Balin</li>
-                  <li onmousedown="if(event.button==0) halinfo('bodorka');">Bodorka</li>
-                  <li onmousedown="if(event.button==0) halinfo('deverkeszeg');">Dévérkeszeg</li>
-                  <li onmousedown="if(event.button==0) halinfo('karikakeszeg');">Karikakeszeg</li>
-                  <li onmousedown="if(event.button==0) halinfo('ponty');">Ponty</li>
-                  <li onmousedown="if(event.button==0) halinfo('fogassullo');">Fogassüllő</li>
-                  <li onmousedown="if(event.button==0) halinfo('csuka');">Csuka</li>
-                  <li onmousedown="if(event.button==0) halinfo('compo');">Compó</li>
-                  <li onmousedown="if(event.button==0) halinfo('fejes');">Fejes domolykó</li>
-                  <li onmousedown="if(event.button==0) halinfo('garda');">Garda</li>
-                  <li onmousedown="if(event.button==0) halinfo('harcsa');">Harcsa</li>
+                  <li onclick="if(event.button==0) halinfo('balin');">Balin</li>
+                  <li onclick="if(event.button==0) halinfo('bodorka');">Bodorka</li>
+                  <li onclick="if(event.button==0) halinfo('deverkeszeg');">Dévérkeszeg</li>
+                  <li onclick="if(event.button==0) halinfo('karikakeszeg');">Karikakeszeg</li>
+                  <li onclick="if(event.button==0) halinfo('ponty');">Ponty</li>
+                  <li onclick="if(event.button==0) halinfo('fogassullo');">Fogassüllő</li>
+                  <li onclick="if(event.button==0) halinfo('csuka');">Csuka</li>
+                  <li onclick="if(event.button==0) halinfo('compo');">Compó</li>
+                  <li onclick="if(event.button==0) halinfo('fejes');">Fejes domolykó</li>
+                  <li onclick="if(event.button==0) halinfo('garda');">Garda</li>
+                  <li onclick="if(event.button==0) halinfo('harcsa');">Harcsa</li>
                 </ul>
               </div>
               <div class="col-8">
@@ -172,7 +174,7 @@
                   <div id="sugo">
                     Kattint halfaj nevére, amiről többet szeretnél megtudni...
                   </div>
-                  <a target="_blank">
+                  <a id="halURL" target="_blank">
                     <img id="halKep" class="figure-img rounded img-fluid w-100">
                   </a>
                   <figcaption id="halNevek" class="figure-caption text-center"></figcaption>
@@ -207,11 +209,7 @@
                 legendás zászlóshajója 2015-ben</figcaption>
             </figure>
           </div>
-        </div>
-      </div>
 
-      <div id="menu3" class="container tab-pane fade"><br>
-        <div class="row">
           <div class="col-md-6">
             <h2>Művészet</h2>
             <p>A legnagyobb magyar tó a népdaloktól az irodalmon át a képzőművészetig egy sor műfaj témája lett.</p>
